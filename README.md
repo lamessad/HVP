@@ -40,6 +40,8 @@ devtools::install_github("lamessad/HVP")
 
 ``` r
 # Example GREML outputs
+library(HVP)
+data(example_data)
 varg <- example_data$varg
 varb <- example_data$varb
 covg_hat <- example_data$covg_hat
@@ -79,7 +81,7 @@ v_tau <- example_data$v_tau
 
 ``` r
 # Run HVP model
-results <- hvp_model(
+results <- hvp(
   varg = varg,
   varb = varb,
   covg_hat = covg_hat,
