@@ -26,9 +26,6 @@ relationships.
 You can install the development version of HVP from
 [GitHub](https://github.com/) with:
 
-You can install the development version of HVP from
-[GitHub](https://github.com/) with:
-
 ``` r
 # install.packages("devtools")
 devtools::install_github("lamessad/HVP")
@@ -63,7 +60,7 @@ cov_varg_covg_hat <- example_data$cov_varg_covg_hat
 cov_varb_covg_hat <- example_data$cov_varb_covg_hat
 ```
 
-## 2. Run Mendelian Randomization (MR)
+## 2. Run MR
 
 - Estimate the causal effect size (**tau**) of the exposure on the
   outcome using robust MR methods (e.g., MRLOVA).
