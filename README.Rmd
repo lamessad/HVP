@@ -49,7 +49,7 @@ devtools::install_github("lamessad/HVP")
   - Variances and covariances of these estimates (e.g., **v_varg**, **v_varb**, **v_covg_hat**, **cov_varg_covg_hat**, etc.).
 
 ```r
-# Example GREML output and 'information matrix' 
+# Example GREML output
 library(HVP)
 data("example_data")
 varg <- example_data$varg
@@ -83,8 +83,8 @@ v_tau <- example_data$v_tau
   - **Genetic Covariance**: Corrected covariance between exposure and outcome.
   - **Genetic Correlation**: Corrected genetic correlation due to horizontal pleiotropy.
 
-``` r
-# Run HVP model
+```{r}
+
 library(HVP)
 data("example_data")
 varg <- example_data$varg
@@ -95,7 +95,9 @@ v_varb <- example_data$v_varb
 v_covg_hat <- example_data$v_covg_hat
 cov_varg_covg_hat <- example_data$cov_varg_covg_hat
 cov_varb_covg_hat <- example_data$cov_varb_covg_hat
-results <- hvp(varg, varb, covg_hat, v_varg, v_varb, v_covg_hat, cov_varg_covg_hat, cov_varb_covg_hat, tau, v_tau )
+tau <- example_data$tau
+v_tau <- example_data$v_tau
+results <- hvp(varg, varb, covg_hat, v_varg, v_varb, v_covg_hat, cov_varg_covg_hat, cov_varb_covg_hat, tau)
 results
 ```
 ## Contact

@@ -49,7 +49,7 @@ devtools::install_github("lamessad/HVP")
     **v_varb**, **v_covg_hat**, **cov_varg_covg_hat**, etc.).
 
 ``` r
-# Example GREML output and 'information matrix' 
+# Example GREML output
 library(HVP)
 data("example_data")
 varg <- example_data$varg
@@ -91,7 +91,7 @@ v_tau <- example_data$v_tau
     horizontal pleiotropy.
 
 ``` r
-# Run HVP model
+
 library(HVP)
 data("example_data")
 varg <- example_data$varg
@@ -102,8 +102,18 @@ v_varb <- example_data$v_varb
 v_covg_hat <- example_data$v_covg_hat
 cov_varg_covg_hat <- example_data$cov_varg_covg_hat
 cov_varb_covg_hat <- example_data$cov_varb_covg_hat
-results <- hvp(varg, varb, covg_hat, v_varg, v_varb, v_covg_hat, cov_varg_covg_hat, cov_varb_covg_hat, tau, v_tau )
+tau <- example_data$tau
+v_tau <- example_data$v_tau
+results <- hvp(varg, varb, covg_hat, v_varg, v_varb, v_covg_hat, cov_varg_covg_hat, cov_varb_covg_hat, tau)
 results
+#>                Corrected Heritability     Corrected Genetic Covariance    
+#> Estimate       0.06696947                 0.03452509                      
+#> Standard Error 0.08504413                 0.00304289                      
+#> P_value        0.4310084                  7.749676e-30                    
+#>                Corrected Genetic Correlation    
+#> Estimate       0.5437487                        
+#> Standard Error 1.924691                         
+#> P_value        0.7775508
 ```
 
 ## Contact
