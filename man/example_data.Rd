@@ -14,6 +14,7 @@ A list with the following elements:
 \item{v_tau}{Variance of the causal effect (tau).}
 \item{v_varb}{Variance of the exposure variable.}
 \item{v_varg}{Variance of the outcome variable.}
+\item{cov_varg_varb}{Covariance of between varb and varg.}
 \item{v_covg_hat}{Variance of the genetic covariance (covg_hat).}
 \item{cov_varg_covg_hat}{Covariance between varg and covg_hat.}
 \item{cov_varb_covg_hat}{Covariance between varb and covg_hat.}

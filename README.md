@@ -47,8 +47,6 @@ devtools::install_github("lamessad/HVP")
 
 ``` r
 # Example GREML output
-library(HVP)
-data("example_data")
 varg <- example_data$varg
 varb <- example_data$varb
 covg_hat <- example_data$covg_hat
@@ -56,6 +54,7 @@ covg_hat <- example_data$covg_hat
 v_varg <- example_data$v_varg
 v_varb <- example_data$v_varb
 v_covg_hat <- example_data$v_covg_hat
+cov_varg_varb <- example_data$cov_varg_varb
 cov_varg_covg_hat <- example_data$cov_varg_covg_hat
 cov_varb_covg_hat <- example_data$cov_varb_covg_hat
 ```
@@ -97,20 +96,21 @@ covg_hat <- example_data$covg_hat
 v_varg <- example_data$v_varg
 v_varb <- example_data$v_varb
 v_covg_hat <- example_data$v_covg_hat
+cov_varg_varb <- example_data$cov_varg_varb
 cov_varg_covg_hat <- example_data$cov_varg_covg_hat
 cov_varb_covg_hat <- example_data$cov_varb_covg_hat
 tau <- example_data$tau
 v_tau <- example_data$v_tau
-results <- hvp(varg, varb, covg_hat, v_varg, v_varb, v_covg_hat, cov_varg_covg_hat, cov_varb_covg_hat, tau)
+results <- hvp(varg,varb,covg_hat,v_varg,v_varb,v_covg_hat,cov_varg_varb,cov_varg_covg_hat,cov_varb_covg_hat,tau)
 results
 #>                Corrected Heritability     Corrected Genetic Covariance    
 #> Estimate       0.06696947                 0.03452509                      
-#> Standard Error 0.08504413                 0.00304289                      
-#> P_value        0.4310084                  7.749676e-30                    
+#> Standard Error 0.004131284                0.00304289                      
+#> P_value        4.262847e-59               7.749676e-30                    
 #>                Corrected Genetic Correlation    
 #> Estimate       0.5437487                        
-#> Standard Error 1.924691                         
-#> P_value        0.7775508
+#> Standard Error 0.04998261                       
+#> P_value        1.455327e-27
 ```
 
 ## Contact

@@ -47,8 +47,6 @@ devtools::install_github("lamessad/HVP")
 
 ```r
 # Example GREML output
-library(HVP)
-data("example_data")
 varg <- example_data$varg
 varb <- example_data$varb
 covg_hat <- example_data$covg_hat
@@ -56,6 +54,7 @@ covg_hat <- example_data$covg_hat
 v_varg <- example_data$v_varg
 v_varb <- example_data$v_varb
 v_covg_hat <- example_data$v_covg_hat
+cov_varg_varb <- example_data$cov_varg_varb
 cov_varg_covg_hat <- example_data$cov_varg_covg_hat
 cov_varb_covg_hat <- example_data$cov_varb_covg_hat
 ```
@@ -90,11 +89,12 @@ covg_hat <- example_data$covg_hat
 v_varg <- example_data$v_varg
 v_varb <- example_data$v_varb
 v_covg_hat <- example_data$v_covg_hat
+cov_varg_varb <- example_data$cov_varg_varb
 cov_varg_covg_hat <- example_data$cov_varg_covg_hat
 cov_varb_covg_hat <- example_data$cov_varb_covg_hat
 tau <- example_data$tau
 v_tau <- example_data$v_tau
-results <- hvp(varg, varb, covg_hat, v_varg, v_varb, v_covg_hat, cov_varg_covg_hat, cov_varb_covg_hat, tau)
+results <- hvp(varg,varb,covg_hat,v_varg,v_varb,v_covg_hat,cov_varg_varb,cov_varg_covg_hat,cov_varb_covg_hat,tau)
 results
 ```
 ## Contact
