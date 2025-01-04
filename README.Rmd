@@ -94,8 +94,8 @@ cov_varg_covg_hat <- example_data$cov_varg_covg_hat
 cov_varb_covg_hat <- example_data$cov_varb_covg_hat
 tau <- example_data$tau
 v_tau <- example_data$v_tau
-results <- hvp(varg,varb,covg_hat,v_varg,v_varb,v_covg_hat,cov_varg_varb,cov_varg_covg_hat,cov_varb_covg_hat,tau)
-results
+hvp(varg,varb,covg_hat,v_varg,v_varb,v_covg_hat,cov_varg_varb,cov_varg_covg_hat,cov_varb_covg_hat,tau)
+
 ```
 ## Contact
 

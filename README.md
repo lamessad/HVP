@@ -103,12 +103,10 @@ cov_varg_covg_hat <- example_data$cov_varg_covg_hat
 cov_varb_covg_hat <- example_data$cov_varb_covg_hat
 tau <- example_data$tau
 v_tau <- example_data$v_tau
-results <- hvp(varg,varb,covg_hat,v_varg,v_varb,v_covg_hat,cov_varg_varb,cov_varg_covg_hat,cov_varb_covg_hat,tau)
+hvp(varg,varb,covg_hat,v_varg,v_varb,v_covg_hat,cov_varg_varb,cov_varg_covg_hat,cov_varb_covg_hat,tau)
 #> h2 outcome (corrected)          : Estimate = 0.0670, SE = 0.0041, P-value = < 2.22e-16
 #> Genetic Covariance (corrected)  : Estimate = 0.0345, SE = 0.0030, P-value = < 2.22e-16
 #> Genetic Correlation (corrected) : Estimate = 0.5437, SE = 0.0500, P-value = < 2.22e-16
-results
-#> NULL
 ```
 
 ## Contact
