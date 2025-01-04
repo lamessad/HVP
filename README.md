@@ -104,15 +104,11 @@ cov_varb_covg_hat <- example_data$cov_varb_covg_hat
 tau <- example_data$tau
 v_tau <- example_data$v_tau
 results <- hvp(varg,varb,covg_hat,v_varg,v_varb,v_covg_hat,cov_varg_varb,cov_varg_covg_hat,cov_varb_covg_hat,tau)
+#> h2 outcome (corrected)          : Estimate = 0.0670, SE = 0.0041, P-value = < 2.22e-16
+#> Genetic Covariance (corrected)  : Estimate = 0.0345, SE = 0.0030, P-value = < 2.22e-16
+#> Genetic Correlation (corrected) : Estimate = 0.5437, SE = 0.0500, P-value = < 2.22e-16
 results
-#>                Corrected Heritability     Corrected Genetic Covariance    
-#> Estimate       0.06696947                 0.03452509                      
-#> Standard Error 0.004131284                0.00304289                      
-#> P_value        4.262847e-59               7.749676e-30                    
-#>                Corrected Genetic Correlation    
-#> Estimate       0.5437487                        
-#> Standard Error 0.04998261                       
-#> P_value        1.455327e-27
+#> NULL
 ```
 
 ## Contact

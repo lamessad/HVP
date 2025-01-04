@@ -89,8 +89,18 @@ hvp = function (varg,varb,covg_hat,v_varg,v_varb,v_covg_hat,cov_varg_varb,cov_va
   aoa3=sqrt(t(av3)%*%ov3%*%(av3))
   z3=list(rG=eval(f3),rGSE=as.numeric(aoa3), p_value=as.numeric(pchisq((eval(f3)/aoa3)^2,1,lower.tail=F)))
   #combine the corrected estimates
-  z=as.matrix(cbind(z1, z2, z3))
-  rownames(z)=c("Estimate", "Standard Error", "P_value")
-  colnames(z) =c("Corrected Heritability    ", "Corrected Genetic Covariance    ", "Corrected Genetic Correlation    ")
-  return(z)
+  cat(sprintf("%-32s: Estimate = %.4f, SE = %.4f, P-value = %s\n",
+              "h2 outcome (corrected)", z1$h2,
+              z1$h2SE,
+              format.pval(z1$p_value)))
+  cat(sprintf("%-32s: Estimate = %.4f, SE = %.4f, P-value = %s\n",
+              "Genetic Covariance (corrected)", z2$covg,
+              z2$covgSE,
+              format.pval(z2$p_value)))
+  cat(sprintf("%-32s: Estimate = %.4f, SE = %.4f, P-value = %s\n",
+              "Genetic Correlation (corrected)", z3$rG,
+              z3$rGSE,
+              format.pval(z3$p_value)))
+
+  return(invisible())
 }
